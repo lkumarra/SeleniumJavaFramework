@@ -1,0 +1,2 @@
+Automation framework version : 1.0.0
+Guru99Bank Execution Started on version : 1.0.0
