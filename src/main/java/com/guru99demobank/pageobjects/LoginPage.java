@@ -67,4 +67,28 @@ public class LoginPage {
 	public void clickOnResetButton() {
 		util.clickOnElement(this.loginPageLocators.getResetButtonElement());
 	}
+
+	/**
+	 * Return the text of javascript alert without entering userId and password.
+	 * 
+	 * @return Javascript alert text.
+	 */
+	public String getAlertTextWithoutUserIdandPassword() {
+		util.clickOnElement(this.loginPageLocators.getLoginButtonElement());
+		return util.getJavascriptAlertText();
+	}
+
+	/**
+	 * Perform login by entering userId and password.
+	 * 
+	 * @param userId   : UserId to enter.
+	 * @param password : Password to enter.
+	 * @return Object of HomePage.
+	 */
+	public HomePage login(String userId, String password) {
+		this.enterUserId(userId);
+		this.enterPassword(password);
+		this.clickOnLoginButton();
+		return new HomePage();
+	}
 }

@@ -15,7 +15,7 @@ public class DirectoryPaths {
 			+ "\\src\\test\\resources\\ExecutionArtifacts\\Artifacts\\Guru99Bank.log";
 	public static final String ZIP_ARTIFACTS = CURR_DIR + "\\src\\test\\resources\\ExecutionArtifacts\\Artifacts" + "_" + DATE
 			+ ".zip";
-	public static final String SCREENSHOT_FOLDER = CURR_DIR + "src\\test\\resources\\Sreenshots";
+	public static final String SCREENSHOT_FOLDER = CURR_DIR + "\\src\\test\\resources\\Sreenshots\\";
 	public static final String ARTIFACTS_FOLDER = CURR_DIR + "\\src\\test\\resources\\ExecutionArtifacts\\Artifacts";
-
+	public static final String EXCEL_PATH = CURR_DIR+"\\src\\test\\resources\\TestData\\Guru99BankData.xlsx";
 }

@@ -86,7 +86,7 @@ public class BasePage {
 	 * Perform the teardown operations after execution.
 	 */
 	public static void tearDown() {
-		getWebdriver().close();
+		getWebdriver().quit();;
 		logger.debug("Execution completed");
 	}
 

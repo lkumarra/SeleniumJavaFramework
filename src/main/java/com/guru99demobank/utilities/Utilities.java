@@ -1,12 +1,20 @@
 package com.guru99demobank.utilities;
 
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -14,6 +22,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.guru99demobank.constants.DirectoryPaths;
 import com.guru99demobank.threadlocal.DriverManager;
 
 public class Utilities {
@@ -24,6 +33,7 @@ public class Utilities {
 	public Utilities() {
 		this.driver = DriverManager.getWebdriver();
 	}
+
 	/**
 	 * Return the instanse of the WebdriverWait
 	 * 
@@ -44,6 +54,13 @@ public class Utilities {
 	}
 
 	/**
+	 * Wait for alert to be present.
+	 */
+	public synchronized void alertToBePresentWait() {
+		getWebdiverWaitInstance().until(ExpectedConditions.alertIsPresent());
+	}
+
+	/**
 	 * Wait for maximux 30 second for the visisblity of webelement.
 	 * 
 	 * @param element : Webelement for wait.
@@ -53,14 +70,43 @@ public class Utilities {
 	}
 
 	/**
+	 * Return Webelement using by.
+	 * 
+	 * @param by
+	 * @return Webelement
+	 */
+	private WebElement getWebElement(By by) {
+		return driver.findElement(by);
+	}
+
+	/**
+	 * Return list of webelements using by.
+	 * 
+	 * @param by
+	 * @return List of Webelements.
+	 */
+	private List<WebElement> getWebElementList(By by) {
+		return driver.findElements(by);
+	}
+
+	/**
 	 * Perform click operation on webelement.
 	 * 
 	 * @param element: Webelement to perform operation.
 	 */
 	public synchronized void clickOnElement(WebElement element) {
 		this.elementToBeClickableWait(element);
+		logger.debug("Clicked on " + element.getAttribute("value"));
 		element.click();
-		logger.debug("Clicked on "+element.getText());
+	}
+
+	/**
+	 * Perform click operation using By.
+	 * @param by
+	 */
+	public synchronized void clickOnElement(By by) {
+		WebElement element = getWebElement(by);
+		clickOnElement(element);
 	}
 
 	/**
@@ -72,7 +118,16 @@ public class Utilities {
 		this.elementToBeVisisbleWait(element);
 		JavascriptExecutor executor = (JavascriptExecutor) this.driver;
 		executor.executeScript("arguments[0].click();", element);
-		logger.debug("Clicked on "+element.getText()+" using java script executor");
+		logger.debug("Clicked on " + element.getText() + " using java script executor");
+	}
+	
+	/**
+	 * Perform click operation using By.
+	 * @param by
+	 */
+	public synchronized void clickUsingJs(By by) {
+		WebElement element = getWebElement(by);
+		clickOnElement(element);
 	}
 
 	/**
@@ -87,13 +142,25 @@ public class Utilities {
 		this.elementToBeVisisbleWait(element);
 		if (isAfterClear) {
 			element.clear();
-			logger.debug("Performing clear operation on "+element.toString().split(" -> ")[1]);
+			logger.debug("Performing clear operation on " + element.toString().split(" -> ")[1]);
 			element.sendKeys(textToEnter);
-			logger.debug("Sending keys "+textToEnter+" on "+element.toString().split(" -> ")[1]);
+			logger.debug("Sending keys " + textToEnter + " on " + element.toString().split(" -> ")[1]);
 		} else {
 			element.sendKeys(textToEnter);
-			logger.debug("Sending keys "+textToEnter+" on "+element.toString().split(" -> ")[1]);
+			logger.debug("Sending keys " + textToEnter + " on " + element.toString().split(" -> ")[1]);
 		}
+	}
+	
+	/**
+	 * Enter text into webelement.
+	 * @param by : By Locator.
+	 * @param textToEnter : Text to enter in webelement.
+	 * @param isAfterClear : True if clear operation has to be performed before text
+	 *                     enter else false
+	 */
+	public synchronized void enterTextIntoTextBox(By by, String textToEnter, boolean isAfterClear) {
+		WebElement element = getWebElement(by);
+		enterTextIntoTextBox(element, textToEnter, isAfterClear);
 	}
 
 	/**
@@ -104,7 +171,16 @@ public class Utilities {
 	public synchronized void clearText(WebElement element) {
 		this.elementToBeVisisbleWait(element);
 		element.clear();
-		logger.debug("Performing clear operation on "+element.toString().split(" -> ")[1]);
+		logger.debug("Performing clear operation on " + element.toString().split(" -> ")[1]);
+	}
+	
+	/**
+	 * Perform clear operation on webelement using By Locator.
+	 * @param by By Locator.
+	 */
+	public synchronized void clearText(By by) {
+		WebElement element = getWebElement(by);
+		clearText(element);
 	}
 
 	/**
@@ -115,8 +191,8 @@ public class Utilities {
 	 */
 	public synchronized String getWebelementText(WebElement element) {
 		this.elementToBeVisisbleWait(element);
-		logger.debug("Getting the text of "+element.toString().split(" -> ")[1]);
-		logger.debug("Text of "+element.toString().split(" -> ")[1]+" is "+element.getText());
+		logger.debug("Getting the text of " + element.toString().split(" -> ")[1]);
+		logger.debug("Text of " + element.toString().split(" -> ")[1] + " is " + element.getText());
 		return element.getText();
 	}
 
@@ -144,8 +220,8 @@ public class Utilities {
 	 */
 	public synchronized String getArributeValue(WebElement element, String attribute) {
 		this.elementToBeVisisbleWait(element);
-		logger.debug("Getting the attribute "+attribute+" of "+element.toString().split(" -> ")[1]);
-		logger.debug("Attribute of "+element.toString().split(" -> ")[1]+" is "+element.getAttribute(attribute));
+		logger.debug("Getting the attribute " + attribute + " of " + element.toString().split(" -> ")[1]);
+		logger.debug("Attribute of " + element.toString().split(" -> ")[1] + " is " + element.getAttribute(attribute));
 		return element.getAttribute(attribute);
 	}
 
@@ -238,6 +314,40 @@ public class Utilities {
 	 */
 	public synchronized void mouseMoveToWebelement(WebElement element) {
 		this.getActionInstance().moveToElement(element).build().perform();
+	}
+
+	/**
+	 * Get the Javascript alert text and accept the alert.
+	 * 
+	 * @return Text of javascript.
+	 */
+	public synchronized String getJavascriptAlertText() {
+		System.out.println("Inside alert method");
+		this.alertToBePresentWait();
+		String alertText = driver.switchTo().alert().getText();
+		driver.switchTo().alert().accept();
+		return alertText;
+	}
+
+	/**
+	 * 
+	 * @param screenShotName
+	 * @return
+	 */
+	public synchronized static String captureScreenShot(String screenShotName) {
+		Date date = new Date();
+		SimpleDateFormat dateFormate = new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss");
+		String formatedDate = dateFormate.format(date);
+		System.out.println(System.getProperty("user.dir"));
+		try {
+			File Src = ((TakesScreenshot) DriverManager.getWebdriver()).getScreenshotAs(OutputType.FILE);
+			FileUtils.copyFile(Src,
+					new File(DirectoryPaths.SCREENSHOT_FOLDER + screenShotName + formatedDate + ".png"));
+		} catch (IOException e) {
+
+		}
+		String screenShotLink = DirectoryPaths.SCREENSHOT_FOLDER + screenShotName + formatedDate + ".png";
+		return screenShotLink;
 	}
 
 }
