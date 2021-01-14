@@ -1,116 +1,191 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="15" passed="15">
+<testng-results skipped="0" failed="0" ignored="0" total="29" passed="29">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14800" started-at="2021-01-13T19:55:26 IST" finished-at="2021-01-13T19:55:40 IST">
+  <suite name="Guru99Test Automation Framework" duration-ms="88895" started-at="2021-01-14T21:12:31 IST" finished-at="2021-01-14T21:14:00 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="14800" started-at="2021-01-13T19:55:26 IST" finished-at="2021-01-13T19:55:40 IST">
-      <class name="com.guru99demobank.tests.HomePageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.guru99demobank.tests.HomePageTest@7e2d773b]" name="setUp" is-config="true" duration-ms="13174" started-at="2021-01-13T19:55:26 IST" finished-at="2021-01-13T19:55:39 IST">
+    <test name="Test" duration-ms="88895" started-at="2021-01-14T21:12:31 IST" finished-at="2021-01-14T21:14:00 IST">
+      <class name="com.guru99demobank.tests.LoginPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.guru99demobank.tests.LoginPageTest@6caf0677]" name="setUp" is-config="true" duration-ms="55273" started-at="2021-01-14T21:12:32 IST" finished-at="2021-01-14T21:13:27 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyLinks(java.util.Hashtable)[pri:0, instance:com.guru99demobank.tests.HomePageTest@7e2d773b]" name="verifyLinks" duration-ms="8" started-at="2021-01-13T19:55:39 IST" data-provider="dp" finished-at="2021-01-13T19:55:39 IST">
+        <test-method status="PASS" signature="verifyUserIdLabelText(java.util.Hashtable)[pri:0, instance:com.guru99demobank.tests.LoginPageTest@6caf0677]" name="verifyUserIdLabelText" duration-ms="39" started-at="2021-01-14T21:13:27 IST" data-provider="dp" finished-at="2021-01-14T21:13:27 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{index=0.0, linkText=Manager}]]>
+                <![CDATA[{userIdLabel=UserID}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyLinks -->
-        <test-method status="PASS" signature="verifyLinks(java.util.Hashtable)[pri:0, instance:com.guru99demobank.tests.HomePageTest@7e2d773b]" name="verifyLinks" duration-ms="1" started-at="2021-01-13T19:55:39 IST" data-provider="dp" finished-at="2021-01-13T19:55:39 IST">
+        </test-method> <!-- verifyUserIdLabelText -->
+        <test-method status="PASS" signature="verifyPasswordLabelText(java.util.Hashtable)[pri:1, instance:com.guru99demobank.tests.LoginPageTest@6caf0677]" name="verifyPasswordLabelText" duration-ms="48" started-at="2021-01-14T21:13:27 IST" data-provider="dp" finished-at="2021-01-14T21:13:27 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{index=1.0, linkText=New Customer}]]>
+                <![CDATA[{passwordLabel=Password}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyLinks -->
-        <test-method status="PASS" signature="verifyLinks(java.util.Hashtable)[pri:0, instance:com.guru99demobank.tests.HomePageTest@7e2d773b]" name="verifyLinks" duration-ms="0" started-at="2021-01-13T19:55:39 IST" data-provider="dp" finished-at="2021-01-13T19:55:39 IST">
+        </test-method> <!-- verifyPasswordLabelText -->
+        <test-method status="PASS" signature="verifyJavascriptAlertText(java.util.Hashtable)[pri:3, instance:com.guru99demobank.tests.LoginPageTest@6caf0677]" name="verifyJavascriptAlertText" duration-ms="16422" started-at="2021-01-14T21:13:43 IST" data-provider="dp" finished-at="2021-01-14T21:14:00 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{index=2.0, linkText=Edit Customer}]]>
+                <![CDATA[{alertText=User or Password is not valid}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyLinks -->
-        <test-method status="PASS" signature="verifyLinks(java.util.Hashtable)[pri:0, instance:com.guru99demobank.tests.HomePageTest@7e2d773b]" name="verifyLinks" duration-ms="1" started-at="2021-01-13T19:55:39 IST" data-provider="dp" finished-at="2021-01-13T19:55:39 IST">
+        </test-method> <!-- verifyJavascriptAlertText -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.guru99demobank.tests.LoginPageTest@6caf0677]" name="tearDown" is-config="true" duration-ms="617" started-at="2021-01-14T21:14:00 IST" finished-at="2021-01-14T21:14:00 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.guru99demobank.tests.LoginPageTest -->
+      <class name="com.guru99demobank.tests.NewCustomerPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.guru99demobank.tests.NewCustomerPageTest@16eb3ea3]" name="setUp" is-config="true" duration-ms="71743" started-at="2021-01-14T21:12:32 IST" finished-at="2021-01-14T21:13:43 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyAddNewCustomerHeading(java.util.Hashtable)[pri:0, instance:com.guru99demobank.tests.NewCustomerPageTest@16eb3ea3]" name="verifyAddNewCustomerHeading" duration-ms="47" started-at="2021-01-14T21:13:43 IST" data-provider="dp" finished-at="2021-01-14T21:13:43 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{index=3.0, linkText=Delete Customer}]]>
+                <![CDATA[{addCustomerHeading=Add New Customer}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyLinks -->
-        <test-method status="PASS" signature="verifyLinks(java.util.Hashtable)[pri:0, instance:com.guru99demobank.tests.HomePageTest@7e2d773b]" name="verifyLinks" duration-ms="0" started-at="2021-01-13T19:55:39 IST" data-provider="dp" finished-at="2021-01-13T19:55:39 IST">
+        </test-method> <!-- verifyAddNewCustomerHeading -->
+        <test-method status="PASS" signature="verifyCustomerNameLabel(java.util.Hashtable)[pri:1, instance:com.guru99demobank.tests.NewCustomerPageTest@16eb3ea3]" name="verifyCustomerNameLabel" duration-ms="167" started-at="2021-01-14T21:13:43 IST" data-provider="dp" finished-at="2021-01-14T21:13:43 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{index=4.0, linkText=New Account}]]>
+                <![CDATA[{customerNameLabel=Customer Name}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyLinks -->
-        <test-method status="PASS" signature="verifyLinks(java.util.Hashtable)[pri:0, instance:com.guru99demobank.tests.HomePageTest@7e2d773b]" name="verifyLinks" duration-ms="2" started-at="2021-01-13T19:55:39 IST" data-provider="dp" finished-at="2021-01-13T19:55:39 IST">
+        </test-method> <!-- verifyCustomerNameLabel -->
+        <test-method status="PASS" signature="verifyGenderLabel(java.util.Hashtable)[pri:2, instance:com.guru99demobank.tests.NewCustomerPageTest@16eb3ea3]" name="verifyGenderLabel" duration-ms="87" started-at="2021-01-14T21:13:43 IST" data-provider="dp" finished-at="2021-01-14T21:13:43 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{index=5.0, linkText=Edit Account}]]>
+                <![CDATA[{genderLabel=Gender}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyLinks -->
-        <test-method status="PASS" signature="verifyLinks(java.util.Hashtable)[pri:0, instance:com.guru99demobank.tests.HomePageTest@7e2d773b]" name="verifyLinks" duration-ms="2" started-at="2021-01-13T19:55:39 IST" data-provider="dp" finished-at="2021-01-13T19:55:39 IST">
+        </test-method> <!-- verifyGenderLabel -->
+        <test-method status="PASS" signature="verifyDOBLabel(java.util.Hashtable)[pri:3, instance:com.guru99demobank.tests.NewCustomerPageTest@16eb3ea3]" name="verifyDOBLabel" duration-ms="170" started-at="2021-01-14T21:13:43 IST" data-provider="dp" finished-at="2021-01-14T21:13:43 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{index=6.0, linkText=Delete Account}]]>
+                <![CDATA[{dobLabel=Date of Birth}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyLinks -->
-        <test-method status="PASS" signature="verifyLinks(java.util.Hashtable)[pri:0, instance:com.guru99demobank.tests.HomePageTest@7e2d773b]" name="verifyLinks" duration-ms="1" started-at="2021-01-13T19:55:39 IST" data-provider="dp" finished-at="2021-01-13T19:55:39 IST">
+        </test-method> <!-- verifyDOBLabel -->
+        <test-method status="PASS" signature="verifyAddressLabel(java.util.Hashtable)[pri:4, instance:com.guru99demobank.tests.NewCustomerPageTest@16eb3ea3]" name="verifyAddressLabel" duration-ms="122" started-at="2021-01-14T21:13:43 IST" data-provider="dp" finished-at="2021-01-14T21:13:44 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{index=7.0, linkText=Deposit}]]>
+                <![CDATA[{addressLabel=Address}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyLinks -->
-        <test-method status="PASS" signature="verifyLinks(java.util.Hashtable)[pri:0, instance:com.guru99demobank.tests.HomePageTest@7e2d773b]" name="verifyLinks" duration-ms="1" started-at="2021-01-13T19:55:39 IST" data-provider="dp" finished-at="2021-01-13T19:55:39 IST">
+        </test-method> <!-- verifyAddressLabel -->
+        <test-method status="PASS" signature="verifyCityLabel(java.util.Hashtable)[pri:5, instance:com.guru99demobank.tests.NewCustomerPageTest@16eb3ea3]" name="verifyCityLabel" duration-ms="125" started-at="2021-01-14T21:13:43 IST" data-provider="dp" finished-at="2021-01-14T21:13:44 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{index=8.0, linkText=Withdrawal}]]>
+                <![CDATA[{cityLabel=City}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyLinks -->
-        <test-method status="PASS" signature="verifyLinks(java.util.Hashtable)[pri:0, instance:com.guru99demobank.tests.HomePageTest@7e2d773b]" name="verifyLinks" duration-ms="1" started-at="2021-01-13T19:55:39 IST" data-provider="dp" finished-at="2021-01-13T19:55:39 IST">
+        </test-method> <!-- verifyCityLabel -->
+        <test-method status="PASS" signature="verifyStateLabel(java.util.Hashtable)[pri:6, instance:com.guru99demobank.tests.NewCustomerPageTest@16eb3ea3]" name="verifyStateLabel" duration-ms="101" started-at="2021-01-14T21:13:44 IST" data-provider="dp" finished-at="2021-01-14T21:13:44 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{stateLabel=State}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyStateLabel -->
+        <test-method status="PASS" signature="verifyPINLabel(java.util.Hashtable)[pri:7, instance:com.guru99demobank.tests.NewCustomerPageTest@16eb3ea3]" name="verifyPINLabel" duration-ms="99" started-at="2021-01-14T21:13:44 IST" data-provider="dp" finished-at="2021-01-14T21:13:44 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{pinLabel=PIN}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPINLabel -->
+        <test-method status="PASS" signature="verifyMobileNumberLabel(java.util.Hashtable)[pri:8, instance:com.guru99demobank.tests.NewCustomerPageTest@16eb3ea3]" name="verifyMobileNumberLabel" duration-ms="90" started-at="2021-01-14T21:13:44 IST" data-provider="dp" finished-at="2021-01-14T21:13:44 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{mobileNumberLabel=Mobile Number}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMobileNumberLabel -->
+        <test-method status="PASS" signature="verifyEmailLabel(java.util.Hashtable)[pri:9, instance:com.guru99demobank.tests.NewCustomerPageTest@16eb3ea3]" name="verifyEmailLabel" duration-ms="83" started-at="2021-01-14T21:13:44 IST" data-provider="dp" finished-at="2021-01-14T21:13:44 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{emailLabel=E-mail}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEmailLabel -->
+        <test-method status="PASS" signature="verifyPasswordLabel(java.util.Hashtable)[pri:10, instance:com.guru99demobank.tests.NewCustomerPageTest@16eb3ea3]" name="verifyPasswordLabel" duration-ms="78" started-at="2021-01-14T21:13:44 IST" data-provider="dp" finished-at="2021-01-14T21:13:44 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{passwordLabel=Password}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPasswordLabel -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.guru99demobank.tests.NewCustomerPageTest@16eb3ea3]" name="tearDown" is-config="true" duration-ms="1" started-at="2021-01-14T21:13:44 IST" finished-at="2021-01-14T21:13:44 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.guru99demobank.tests.NewCustomerPageTest -->
+      <class name="com.guru99demobank.tests.HomePageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.guru99demobank.tests.HomePageTest@413d1baf]" name="setUp" is-config="true" duration-ms="14473" started-at="2021-01-14T21:12:32 IST" finished-at="2021-01-14T21:12:46 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyLinks(java.util.Hashtable)[pri:0, instance:com.guru99demobank.tests.HomePageTest@413d1baf]" name="verifyLinks" duration-ms="21" started-at="2021-01-14T21:12:47 IST" data-provider="dp" finished-at="2021-01-14T21:12:47 IST">
           <params>
             <param index="0">
               <value>
@@ -121,29 +196,106 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLinks -->
-        <test-method status="PASS" signature="verifyLinks(java.util.Hashtable)[pri:0, instance:com.guru99demobank.tests.HomePageTest@7e2d773b]" name="verifyLinks" duration-ms="0" started-at="2021-01-13T19:55:39 IST" data-provider="dp" finished-at="2021-01-13T19:55:39 IST">
+        <test-method status="PASS" signature="verifyLinks(java.util.Hashtable)[pri:0, instance:com.guru99demobank.tests.HomePageTest@413d1baf]" name="verifyLinks" duration-ms="21" started-at="2021-01-14T21:12:47 IST" data-provider="dp" finished-at="2021-01-14T21:12:47 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{index=10.0, linkText=Change Password}]]>
+                <![CDATA[{index=7.0, linkText=Deposit}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLinks -->
-        <test-method status="PASS" signature="verifyLinks(java.util.Hashtable)[pri:0, instance:com.guru99demobank.tests.HomePageTest@7e2d773b]" name="verifyLinks" duration-ms="1" started-at="2021-01-13T19:55:39 IST" data-provider="dp" finished-at="2021-01-13T19:55:39 IST">
+        <test-method status="PASS" signature="verifyLinks(java.util.Hashtable)[pri:0, instance:com.guru99demobank.tests.HomePageTest@413d1baf]" name="verifyLinks" duration-ms="21" started-at="2021-01-14T21:12:47 IST" data-provider="dp" finished-at="2021-01-14T21:12:47 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{index=11.0, linkText=Balance Enquiry}]]>
+                <![CDATA[{index=3.0, linkText=Delete Customer}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLinks -->
-        <test-method status="PASS" signature="verifyLinks(java.util.Hashtable)[pri:0, instance:com.guru99demobank.tests.HomePageTest@7e2d773b]" name="verifyLinks" duration-ms="1" started-at="2021-01-13T19:55:39 IST" data-provider="dp" finished-at="2021-01-13T19:55:39 IST">
+        <test-method status="PASS" signature="verifyLinks(java.util.Hashtable)[pri:0, instance:com.guru99demobank.tests.HomePageTest@413d1baf]" name="verifyLinks" duration-ms="21" started-at="2021-01-14T21:12:47 IST" data-provider="dp" finished-at="2021-01-14T21:12:47 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{index=4.0, linkText=New Account}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLinks -->
+        <test-method status="PASS" signature="verifyLinks(java.util.Hashtable)[pri:0, instance:com.guru99demobank.tests.HomePageTest@413d1baf]" name="verifyLinks" duration-ms="21" started-at="2021-01-14T21:12:47 IST" data-provider="dp" finished-at="2021-01-14T21:12:47 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{index=1.0, linkText=New Customer}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLinks -->
+        <test-method status="PASS" signature="verifyLinks(java.util.Hashtable)[pri:0, instance:com.guru99demobank.tests.HomePageTest@413d1baf]" name="verifyLinks" duration-ms="21" started-at="2021-01-14T21:12:47 IST" data-provider="dp" finished-at="2021-01-14T21:12:47 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{index=5.0, linkText=Edit Account}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLinks -->
+        <test-method status="PASS" signature="verifyLinks(java.util.Hashtable)[pri:0, instance:com.guru99demobank.tests.HomePageTest@413d1baf]" name="verifyLinks" duration-ms="21" started-at="2021-01-14T21:12:47 IST" data-provider="dp" finished-at="2021-01-14T21:12:47 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{index=0.0, linkText=Manager}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLinks -->
+        <test-method status="PASS" signature="verifyLinks(java.util.Hashtable)[pri:0, instance:com.guru99demobank.tests.HomePageTest@413d1baf]" name="verifyLinks" duration-ms="21" started-at="2021-01-14T21:12:47 IST" data-provider="dp" finished-at="2021-01-14T21:12:47 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{index=2.0, linkText=Edit Customer}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLinks -->
+        <test-method status="PASS" signature="verifyLinks(java.util.Hashtable)[pri:0, instance:com.guru99demobank.tests.HomePageTest@413d1baf]" name="verifyLinks" duration-ms="21" started-at="2021-01-14T21:12:47 IST" data-provider="dp" finished-at="2021-01-14T21:12:47 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{index=6.0, linkText=Delete Account}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLinks -->
+        <test-method status="PASS" signature="verifyLinks(java.util.Hashtable)[pri:0, instance:com.guru99demobank.tests.HomePageTest@413d1baf]" name="verifyLinks" duration-ms="21" started-at="2021-01-14T21:12:47 IST" data-provider="dp" finished-at="2021-01-14T21:12:47 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{index=8.0, linkText=Withdrawal}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLinks -->
+        <test-method status="PASS" signature="verifyLinks(java.util.Hashtable)[pri:0, instance:com.guru99demobank.tests.HomePageTest@413d1baf]" name="verifyLinks" duration-ms="2" started-at="2021-01-14T21:12:47 IST" data-provider="dp" finished-at="2021-01-14T21:12:47 IST">
           <params>
             <param index="0">
               <value>
@@ -154,7 +306,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLinks -->
-        <test-method status="PASS" signature="verifyLinks(java.util.Hashtable)[pri:0, instance:com.guru99demobank.tests.HomePageTest@7e2d773b]" name="verifyLinks" duration-ms="0" started-at="2021-01-13T19:55:39 IST" data-provider="dp" finished-at="2021-01-13T19:55:39 IST">
+        <test-method status="PASS" signature="verifyLinks(java.util.Hashtable)[pri:0, instance:com.guru99demobank.tests.HomePageTest@413d1baf]" name="verifyLinks" duration-ms="4" started-at="2021-01-14T21:12:47 IST" data-provider="dp" finished-at="2021-01-14T21:12:47 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{index=10.0, linkText=Change Password}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLinks -->
+        <test-method status="PASS" signature="verifyLinks(java.util.Hashtable)[pri:0, instance:com.guru99demobank.tests.HomePageTest@413d1baf]" name="verifyLinks" duration-ms="3" started-at="2021-01-14T21:12:47 IST" data-provider="dp" finished-at="2021-01-14T21:12:47 IST">
           <params>
             <param index="0">
               <value>
@@ -165,7 +328,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLinks -->
-        <test-method status="PASS" signature="verifyLinks(java.util.Hashtable)[pri:0, instance:com.guru99demobank.tests.HomePageTest@7e2d773b]" name="verifyLinks" duration-ms="1" started-at="2021-01-13T19:55:39 IST" data-provider="dp" finished-at="2021-01-13T19:55:39 IST">
+        <test-method status="PASS" signature="verifyLinks(java.util.Hashtable)[pri:0, instance:com.guru99demobank.tests.HomePageTest@413d1baf]" name="verifyLinks" duration-ms="4" started-at="2021-01-14T21:12:47 IST" data-provider="dp" finished-at="2021-01-14T21:12:47 IST">
           <params>
             <param index="0">
               <value>
@@ -176,11 +339,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLinks -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.guru99demobank.tests.HomePageTest@7e2d773b]" name="tearDown" is-config="true" duration-ms="915" started-at="2021-01-13T19:55:39 IST" finished-at="2021-01-13T19:55:40 IST">
+        <test-method status="PASS" signature="verifyLinks(java.util.Hashtable)[pri:0, instance:com.guru99demobank.tests.HomePageTest@413d1baf]" name="verifyLinks" duration-ms="2" started-at="2021-01-14T21:12:47 IST" data-provider="dp" finished-at="2021-01-14T21:12:47 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{index=11.0, linkText=Balance Enquiry}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLinks -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.guru99demobank.tests.HomePageTest@413d1baf]" name="tearDown" is-config="true" duration-ms="630" started-at="2021-01-14T21:12:47 IST" finished-at="2021-01-14T21:12:47 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.guru99demobank.tests.HomePageTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Guru99Test Automation Framework -->
 </testng-results>

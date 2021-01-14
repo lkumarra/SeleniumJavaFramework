@@ -1,0 +1,224 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>29/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Jan 14 21:12:31 IST 2021</td>
+</tr>
+<tr><td>Total time:</td><td>88 seconds (88895 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.guru99demobank.tests.NewCustomerPageTest.verifyAddNewCustomerHeading()'><b>verifyAddNewCustomerHeading</b><br>Test class: com.guru99demobank.tests.NewCustomerPageTest<br>Parameters: {addCustomerHeading=Add New Customer}</td>
+<td></td>
+<td>0</td>
+<td>com.guru99demobank.tests.NewCustomerPageTest@16eb3ea3</td></tr>
+<tr>
+<td title='com.guru99demobank.tests.NewCustomerPageTest.verifyAddressLabel()'><b>verifyAddressLabel</b><br>Test class: com.guru99demobank.tests.NewCustomerPageTest<br>Parameters: {addressLabel=Address}</td>
+<td></td>
+<td>0</td>
+<td>com.guru99demobank.tests.NewCustomerPageTest@16eb3ea3</td></tr>
+<tr>
+<td title='com.guru99demobank.tests.NewCustomerPageTest.verifyCityLabel()'><b>verifyCityLabel</b><br>Test class: com.guru99demobank.tests.NewCustomerPageTest<br>Parameters: {cityLabel=City}</td>
+<td></td>
+<td>0</td>
+<td>com.guru99demobank.tests.NewCustomerPageTest@16eb3ea3</td></tr>
+<tr>
+<td title='com.guru99demobank.tests.NewCustomerPageTest.verifyCustomerNameLabel()'><b>verifyCustomerNameLabel</b><br>Test class: com.guru99demobank.tests.NewCustomerPageTest<br>Parameters: {customerNameLabel=Customer Name}</td>
+<td></td>
+<td>0</td>
+<td>com.guru99demobank.tests.NewCustomerPageTest@16eb3ea3</td></tr>
+<tr>
+<td title='com.guru99demobank.tests.NewCustomerPageTest.verifyDOBLabel()'><b>verifyDOBLabel</b><br>Test class: com.guru99demobank.tests.NewCustomerPageTest<br>Parameters: {dobLabel=Date of Birth}</td>
+<td></td>
+<td>0</td>
+<td>com.guru99demobank.tests.NewCustomerPageTest@16eb3ea3</td></tr>
+<tr>
+<td title='com.guru99demobank.tests.NewCustomerPageTest.verifyEmailLabel()'><b>verifyEmailLabel</b><br>Test class: com.guru99demobank.tests.NewCustomerPageTest<br>Parameters: {emailLabel=E-mail}</td>
+<td></td>
+<td>0</td>
+<td>com.guru99demobank.tests.NewCustomerPageTest@16eb3ea3</td></tr>
+<tr>
+<td title='com.guru99demobank.tests.NewCustomerPageTest.verifyGenderLabel()'><b>verifyGenderLabel</b><br>Test class: com.guru99demobank.tests.NewCustomerPageTest<br>Parameters: {genderLabel=Gender}</td>
+<td></td>
+<td>0</td>
+<td>com.guru99demobank.tests.NewCustomerPageTest@16eb3ea3</td></tr>
+<tr>
+<td title='com.guru99demobank.tests.LoginPageTest.verifyJavascriptAlertText()'><b>verifyJavascriptAlertText</b><br>Test class: com.guru99demobank.tests.LoginPageTest<br>Parameters: {alertText=User or Password is not valid}</td>
+<td></td>
+<td>16</td>
+<td>com.guru99demobank.tests.LoginPageTest@6caf0677</td></tr>
+<tr>
+<td title='com.guru99demobank.tests.HomePageTest.verifyLinks()'><b>verifyLinks</b><br>Test class: com.guru99demobank.tests.HomePageTest<br>Parameters: {index=3.0, linkText=Delete Customer}</td>
+<td></td>
+<td>0</td>
+<td>com.guru99demobank.tests.HomePageTest@413d1baf</td></tr>
+<tr>
+<td title='com.guru99demobank.tests.HomePageTest.verifyLinks()'><b>verifyLinks</b><br>Test class: com.guru99demobank.tests.HomePageTest<br>Parameters: {index=6.0, linkText=Delete Account}</td>
+<td></td>
+<td>0</td>
+<td>com.guru99demobank.tests.HomePageTest@413d1baf</td></tr>
+<tr>
+<td title='com.guru99demobank.tests.HomePageTest.verifyLinks()'><b>verifyLinks</b><br>Test class: com.guru99demobank.tests.HomePageTest<br>Parameters: {index=8.0, linkText=Withdrawal}</td>
+<td></td>
+<td>0</td>
+<td>com.guru99demobank.tests.HomePageTest@413d1baf</td></tr>
+<tr>
+<td title='com.guru99demobank.tests.HomePageTest.verifyLinks()'><b>verifyLinks</b><br>Test class: com.guru99demobank.tests.HomePageTest<br>Parameters: {index=5.0, linkText=Edit Account}</td>
+<td></td>
+<td>0</td>
+<td>com.guru99demobank.tests.HomePageTest@413d1baf</td></tr>
+<tr>
+<td title='com.guru99demobank.tests.HomePageTest.verifyLinks()'><b>verifyLinks</b><br>Test class: com.guru99demobank.tests.HomePageTest<br>Parameters: {index=1.0, linkText=New Customer}</td>
+<td></td>
+<td>0</td>
+<td>com.guru99demobank.tests.HomePageTest@413d1baf</td></tr>
+<tr>
+<td title='com.guru99demobank.tests.HomePageTest.verifyLinks()'><b>verifyLinks</b><br>Test class: com.guru99demobank.tests.HomePageTest<br>Parameters: {index=4.0, linkText=New Account}</td>
+<td></td>
+<td>0</td>
+<td>com.guru99demobank.tests.HomePageTest@413d1baf</td></tr>
+<tr>
+<td title='com.guru99demobank.tests.HomePageTest.verifyLinks()'><b>verifyLinks</b><br>Test class: com.guru99demobank.tests.HomePageTest<br>Parameters: {index=9.0, linkText=Fund Transfer}</td>
+<td></td>
+<td>0</td>
+<td>com.guru99demobank.tests.HomePageTest@413d1baf</td></tr>
+<tr>
+<td title='com.guru99demobank.tests.HomePageTest.verifyLinks()'><b>verifyLinks</b><br>Test class: com.guru99demobank.tests.HomePageTest<br>Parameters: {index=2.0, linkText=Edit Customer}</td>
+<td></td>
+<td>0</td>
+<td>com.guru99demobank.tests.HomePageTest@413d1baf</td></tr>
+<tr>
+<td title='com.guru99demobank.tests.HomePageTest.verifyLinks()'><b>verifyLinks</b><br>Test class: com.guru99demobank.tests.HomePageTest<br>Parameters: {index=0.0, linkText=Manager}</td>
+<td></td>
+<td>0</td>
+<td>com.guru99demobank.tests.HomePageTest@413d1baf</td></tr>
+<tr>
+<td title='com.guru99demobank.tests.HomePageTest.verifyLinks()'><b>verifyLinks</b><br>Test class: com.guru99demobank.tests.HomePageTest<br>Parameters: {index=7.0, linkText=Deposit}</td>
+<td></td>
+<td>0</td>
+<td>com.guru99demobank.tests.HomePageTest@413d1baf</td></tr>
+<tr>
+<td title='com.guru99demobank.tests.HomePageTest.verifyLinks()'><b>verifyLinks</b><br>Test class: com.guru99demobank.tests.HomePageTest<br>Parameters: {index=11.0, linkText=Balance Enquiry}</td>
+<td></td>
+<td>0</td>
+<td>com.guru99demobank.tests.HomePageTest@413d1baf</td></tr>
+<tr>
+<td title='com.guru99demobank.tests.HomePageTest.verifyLinks()'><b>verifyLinks</b><br>Test class: com.guru99demobank.tests.HomePageTest<br>Parameters: {index=12.0, linkText=Mini Statement}</td>
+<td></td>
+<td>0</td>
+<td>com.guru99demobank.tests.HomePageTest@413d1baf</td></tr>
+<tr>
+<td title='com.guru99demobank.tests.HomePageTest.verifyLinks()'><b>verifyLinks</b><br>Test class: com.guru99demobank.tests.HomePageTest<br>Parameters: {index=13.0, linkText=Customised Statement}</td>
+<td></td>
+<td>0</td>
+<td>com.guru99demobank.tests.HomePageTest@413d1baf</td></tr>
+<tr>
+<td title='com.guru99demobank.tests.HomePageTest.verifyLinks()'><b>verifyLinks</b><br>Test class: com.guru99demobank.tests.HomePageTest<br>Parameters: {index=10.0, linkText=Change Password}</td>
+<td></td>
+<td>0</td>
+<td>com.guru99demobank.tests.HomePageTest@413d1baf</td></tr>
+<tr>
+<td title='com.guru99demobank.tests.HomePageTest.verifyLinks()'><b>verifyLinks</b><br>Test class: com.guru99demobank.tests.HomePageTest<br>Parameters: {index=14.0, linkText=Log out}</td>
+<td></td>
+<td>0</td>
+<td>com.guru99demobank.tests.HomePageTest@413d1baf</td></tr>
+<tr>
+<td title='com.guru99demobank.tests.NewCustomerPageTest.verifyMobileNumberLabel()'><b>verifyMobileNumberLabel</b><br>Test class: com.guru99demobank.tests.NewCustomerPageTest<br>Parameters: {mobileNumberLabel=Mobile Number}</td>
+<td></td>
+<td>0</td>
+<td>com.guru99demobank.tests.NewCustomerPageTest@16eb3ea3</td></tr>
+<tr>
+<td title='com.guru99demobank.tests.NewCustomerPageTest.verifyPINLabel()'><b>verifyPINLabel</b><br>Test class: com.guru99demobank.tests.NewCustomerPageTest<br>Parameters: {pinLabel=PIN}</td>
+<td></td>
+<td>0</td>
+<td>com.guru99demobank.tests.NewCustomerPageTest@16eb3ea3</td></tr>
+<tr>
+<td title='com.guru99demobank.tests.NewCustomerPageTest.verifyPasswordLabel()'><b>verifyPasswordLabel</b><br>Test class: com.guru99demobank.tests.NewCustomerPageTest<br>Parameters: {passwordLabel=Password}</td>
+<td></td>
+<td>0</td>
+<td>com.guru99demobank.tests.NewCustomerPageTest@16eb3ea3</td></tr>
+<tr>
+<td title='com.guru99demobank.tests.LoginPageTest.verifyPasswordLabelText()'><b>verifyPasswordLabelText</b><br>Test class: com.guru99demobank.tests.LoginPageTest<br>Parameters: {passwordLabel=Password}</td>
+<td></td>
+<td>0</td>
+<td>com.guru99demobank.tests.LoginPageTest@6caf0677</td></tr>
+<tr>
+<td title='com.guru99demobank.tests.NewCustomerPageTest.verifyStateLabel()'><b>verifyStateLabel</b><br>Test class: com.guru99demobank.tests.NewCustomerPageTest<br>Parameters: {stateLabel=State}</td>
+<td></td>
+<td>0</td>
+<td>com.guru99demobank.tests.NewCustomerPageTest@16eb3ea3</td></tr>
+<tr>
+<td title='com.guru99demobank.tests.LoginPageTest.verifyUserIdLabelText()'><b>verifyUserIdLabelText</b><br>Test class: com.guru99demobank.tests.LoginPageTest<br>Parameters: {userIdLabel=UserID}</td>
+<td></td>
+<td>0</td>
+<td>com.guru99demobank.tests.LoginPageTest@6caf0677</td></tr>
+</table><p>
+</body>
+</html>

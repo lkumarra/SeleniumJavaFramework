@@ -95,13 +95,14 @@ public class Utilities {
 	 * @param element: Webelement to perform operation.
 	 */
 	public synchronized void clickOnElement(WebElement element) {
-		this.elementToBeClickableWait(element);
+		elementToBeClickableWait(element);
 		logger.debug("Clicked on " + element.getAttribute("value"));
 		element.click();
 	}
 
 	/**
 	 * Perform click operation using By.
+	 * 
 	 * @param by
 	 */
 	public synchronized void clickOnElement(By by) {
@@ -120,9 +121,10 @@ public class Utilities {
 		executor.executeScript("arguments[0].click();", element);
 		logger.debug("Clicked on " + element.getText() + " using java script executor");
 	}
-	
+
 	/**
 	 * Perform click operation using By.
+	 * 
 	 * @param by
 	 */
 	public synchronized void clickUsingJs(By by) {
@@ -139,7 +141,7 @@ public class Utilities {
 	 *                     enter else false.
 	 */
 	public synchronized void enterTextIntoTextBox(WebElement element, String textToEnter, boolean isAfterClear) {
-		this.elementToBeVisisbleWait(element);
+		elementToBeVisisbleWait(element);
 		if (isAfterClear) {
 			element.clear();
 			logger.debug("Performing clear operation on " + element.toString().split(" -> ")[1]);
@@ -150,11 +152,12 @@ public class Utilities {
 			logger.debug("Sending keys " + textToEnter + " on " + element.toString().split(" -> ")[1]);
 		}
 	}
-	
+
 	/**
 	 * Enter text into webelement.
-	 * @param by : By Locator.
-	 * @param textToEnter : Text to enter in webelement.
+	 * 
+	 * @param by           : By Locator.
+	 * @param textToEnter  : Text to enter in webelement.
 	 * @param isAfterClear : True if clear operation has to be performed before text
 	 *                     enter else false
 	 */
@@ -169,13 +172,14 @@ public class Utilities {
 	 * @param element : Webelement to perform clear operation
 	 */
 	public synchronized void clearText(WebElement element) {
-		this.elementToBeVisisbleWait(element);
+		elementToBeVisisbleWait(element);
 		element.clear();
 		logger.debug("Performing clear operation on " + element.toString().split(" -> ")[1]);
 	}
-	
+
 	/**
 	 * Perform clear operation on webelement using By Locator.
+	 * 
 	 * @param by By Locator.
 	 */
 	public synchronized void clearText(By by) {
@@ -190,12 +194,21 @@ public class Utilities {
 	 * @return Text of webelement.
 	 */
 	public synchronized String getWebelementText(WebElement element) {
-		this.elementToBeVisisbleWait(element);
+		elementToBeVisisbleWait(element);
 		logger.debug("Getting the text of " + element.toString().split(" -> ")[1]);
 		logger.debug("Text of " + element.toString().split(" -> ")[1] + " is " + element.getText());
 		return element.getText();
 	}
 
+	/**
+	 * Return the text of webelement.
+	 * @param by : By Locator.
+	 * @return Text of webelement
+	 */
+	public synchronized String getWebelementText(By by) {
+		WebElement element = getWebElement(by);
+		return getWebelementText(element);
+	}
 	/**
 	 * Return the list of text of webelements.
 	 * 
@@ -210,6 +223,16 @@ public class Utilities {
 		}
 		return textList;
 	}
+	
+	/**
+	 * Return the list of webelements.
+	 * @param by : By Locator
+	 * @return List of text of webelements.
+	 */
+	public synchronized List<String> getWebelementsTexts(By by){
+		List<WebElement> WebelementList =getWebElementList(by);
+		return getWebelementsTexts(WebelementList);
+	}
 
 	/**
 	 * Return the value of attribute
@@ -219,7 +242,7 @@ public class Utilities {
 	 * @return attribute value.
 	 */
 	public synchronized String getArributeValue(WebElement element, String attribute) {
-		this.elementToBeVisisbleWait(element);
+		elementToBeVisisbleWait(element);
 		logger.debug("Getting the attribute " + attribute + " of " + element.toString().split(" -> ")[1]);
 		logger.debug("Attribute of " + element.toString().split(" -> ")[1] + " is " + element.getAttribute(attribute));
 		return element.getAttribute(attribute);
@@ -233,7 +256,7 @@ public class Utilities {
 	 * @return Css Property value.
 	 */
 	public synchronized String getCssValue(WebElement element, String cssAttribute) {
-		this.elementToBeVisisbleWait(element);
+		elementToBeVisisbleWait(element);
 		return element.getCssValue(cssAttribute);
 	}
 
@@ -244,7 +267,7 @@ public class Utilities {
 	 * @return True if enable false otherwise.
 	 */
 	public synchronized boolean isEnabled(WebElement element) {
-		this.elementToBeVisisbleWait(element);
+		elementToBeVisisbleWait(element);
 		return element.isEnabled();
 	}
 
@@ -255,7 +278,7 @@ public class Utilities {
 	 * @return instanse of select class.
 	 */
 	private synchronized Select getSelectInstance(WebElement element) {
-		this.elementToBeVisisbleWait(element);
+		elementToBeVisisbleWait(element);
 		return new Select(element);
 	}
 
@@ -266,7 +289,7 @@ public class Utilities {
 	 * @param value   : Value to select
 	 */
 	public synchronized void selectElementByValue(WebElement element, String value) {
-		this.getSelectInstance(element).selectByValue(value);
+		getSelectInstance(element).selectByValue(value);
 	}
 
 	/**
@@ -276,7 +299,7 @@ public class Utilities {
 	 * @param text    : text to select
 	 */
 	public synchronized void selectElementByText(WebElement element, String text) {
-		this.getSelectInstance(element).selectByVisibleText(text);
+		getSelectInstance(element).selectByVisibleText(text);
 	}
 
 	/**
@@ -286,7 +309,7 @@ public class Utilities {
 	 * @param index   : index to select.
 	 */
 	public synchronized void selectElementByIndex(WebElement element, int index) {
-		this.getSelectInstance(element).selectByIndex(index);
+		getSelectInstance(element).selectByIndex(index);
 	}
 
 	/**
@@ -304,7 +327,7 @@ public class Utilities {
 	 * @param element : Webelement to perform right click operation.
 	 */
 	public synchronized void performRightClickOperaion(WebElement element) {
-		this.getActionInstance().contextClick(element).build().perform();
+		getActionInstance().contextClick(element).build().perform();
 	}
 
 	/**
@@ -313,7 +336,7 @@ public class Utilities {
 	 * @param element : Webelemet for perform mouse move operation
 	 */
 	public synchronized void mouseMoveToWebelement(WebElement element) {
-		this.getActionInstance().moveToElement(element).build().perform();
+		getActionInstance().moveToElement(element).build().perform();
 	}
 
 	/**
@@ -330,9 +353,10 @@ public class Utilities {
 	}
 
 	/**
+	 * Take screenshot and return the path of screenshot.
 	 * 
-	 * @param screenShotName
-	 * @return
+	 * @param screenShotName : Name of the screenshot.
+	 * @return Screenshot path.
 	 */
 	public synchronized static String captureScreenShot(String screenShotName) {
 		Date date = new Date();

@@ -6,9 +6,11 @@
 		<listener
 			class-name="com.guru99demobank.listners.SuiteListners"></listener>
 	</listeners>
-	<test thread-count="5" name="Test">
+	<test thread-count="3" name="Test" >
 		<classes>
 			<class name="com.guru99demobank.tests.LoginPageTest" />
+			<class name="com.guru99demobank.tests.HomePageTest" />
+			<class name="com.guru99demobank.tests.NewCustomerPageTest" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

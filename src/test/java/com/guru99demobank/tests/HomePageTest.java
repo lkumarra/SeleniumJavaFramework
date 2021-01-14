@@ -4,8 +4,8 @@ import java.util.Hashtable;
 import java.util.List;
 
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.guru99demobank.pageobjects.BasePage;
@@ -17,7 +17,7 @@ public class HomePageTest {
 	public HomePage homePage;
 	public List<String> list;
 	
-	@BeforeTest
+	@BeforeClass
 	public void setUp() {
 		homePage = BaseTest.setUp(HomePageTest.class);
 		list = homePage.getLinkTexts();
@@ -29,7 +29,7 @@ public class HomePageTest {
 		Assert.assertEquals(list.get(index), table.get("linkText"));
 	}
 	
-	@AfterTest
+	@AfterClass
 	public void tearDown() {
 		BasePage.tearDown();
 	}

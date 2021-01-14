@@ -7,6 +7,9 @@ import com.guru99demobank.pageobjects.LoginPage;
 
 public class BaseTest {
 	
+	public static LoginPage loginPage;
+	public static HomePage homePage;
+	
 	@SuppressWarnings("unchecked")
 	public static <T> T setUp(@SuppressWarnings("rawtypes") Class clazz) {
 		BasePage.initialization(Configurations.browser, Configurations.url);
@@ -14,9 +17,13 @@ public class BaseTest {
 		case "LoginPageTest":
 			return (T) new LoginPage();
 		case "HomePageTest":
-			LoginPage loginPage = new LoginPage();
+			loginPage = new LoginPage();
 			HomePage homePage = loginPage.login(Configurations.userId, Configurations.password);
 			return (T) homePage;
+		case "NewCustomerPageTest":
+			loginPage = new LoginPage();
+			homePage = loginPage.login(Configurations.userId, Configurations.password);
+			return (T) homePage.clickOnNewCustomerLink();
 		default:
 			break;
 		}
